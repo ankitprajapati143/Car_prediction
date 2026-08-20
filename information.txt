@@ -1,0 +1,89 @@
+Car Price Prediction using Random Forest
+
+Project Description
+-------------------
+This project predicts the estimated price of a used car using a Random Forest
+Regression model and provides a Streamlit web interface.
+
+Files
+-----
+- app.py                : Streamlit application and Random Forest model
+- quikr_car.csv         : Car dataset
+- information.txt       : Project information and setup instructions
+
+Technologies Used
+-----------------
+- Python
+- Pandas
+- NumPy
+- Scikit-learn
+- Streamlit
+
+Machine Learning Model
+----------------------
+Algorithm: Random Forest Regressor
+
+Model parameters:
+- n_estimators = 100
+- random_state = 42
+- test_size = 0.20
+
+Input Features
+--------------
+- name
+- company
+- year
+- kms_driven
+- fuel_type
+
+Target Variable
+---------------
+- Price
+
+Data Preprocessing
+------------------
+- Column names are stripped of extra spaces.
+- kms_driven is converted to numeric values.
+- year is converted to numeric values.
+- Missing numerical values are handled during preprocessing.
+- Missing fuel type values are filled using the mode.
+- Price is converted to numeric values.
+- Rows without a valid Price are removed.
+- Categorical features are encoded using pandas get_dummies with drop_first=True.
+
+How to Run Locally
+------------------
+1. Install Python.
+2. Open the project folder in VS Code.
+3. Open the VS Code terminal.
+4. Install the required packages:
+
+   python -m pip install streamlit pandas numpy scikit-learn
+
+5. Run the Streamlit application:
+
+   python -m streamlit run app.py
+
+6. Open the local URL shown in the terminal, usually:
+
+   http://localhost:8501
+
+Important
+---------
+Keep app.py and quikr_car.csv in the same project folder.
+
+GitHub Upload
+-------------
+Upload these project files to the GitHub repository:
+- app.py
+- quikr_car.csv
+- information.txt
+
+Do not upload passwords, API keys, ngrok authentication tokens, or other
+private credentials.
+
+Project Purpose
+---------------
+The application allows a user to enter car details and receive an estimated
+car price through a Streamlit interface powered by a Random Forest
+Regression model.
